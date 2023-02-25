@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "156646617974",
+    "project_id": "perjal",
+    "storage_bucket": "perjal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156646617974:android:9d3343fe04938a4eff4057",
+        "android_client_info": {
+          "package_name": "com.example.perjal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156646617974-9848nri5g94r4rb14ot78iobi1cs0aei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1rgsL60ENCFjYqwNi_kGdVWvCsvEiIRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156646617974-9848nri5g94r4rb14ot78iobi1cs0aei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156646617974:android:cbc83b3d9f97b866ff4057",
+        "android_client_info": {
+          "package_name": "com.syam.pustakata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156646617974-9848nri5g94r4rb14ot78iobi1cs0aei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1rgsL60ENCFjYqwNi_kGdVWvCsvEiIRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156646617974-9848nri5g94r4rb14ot78iobi1cs0aei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
