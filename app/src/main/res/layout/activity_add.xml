@@ -1,9 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AddActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    //header
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_head"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/button"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="-2dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/logo_putih"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="TAMBAHKAN KOLEKSI BUKU"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText,MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:boxBackgroundMode="outline"
+        app:hintTextColor="@color/button"
+        app:startIconDrawable="@drawable/ic_buku"
+        android:layout_marginHorizontal="30dp"
+        app:boxBackgroundColor="@color/white">
+        <EditText
+            android:id="@+id/et_buku"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:hint="Masukan Judul Buku"
+            android:theme="@style/style_edittext"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:boxBackgroundMode="outline"
+        app:startIconDrawable="@drawable/ic_akun"
+        app:hintTextColor="@color/button"
+        android:layout_marginHorizontal="30dp"
+        app:boxBackgroundColor="@color/white">
+        <EditText
+            android:id="@+id/et_penulis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:hint="Masukan Nama Penulis"
+
+            android:theme="@style/style_edittext"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/bt_input"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="INPUT"
+        android:theme="@style/style_button"/>
+
+    <Button
+        android:id="@+id/bt_batal"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="BATAL"
+        android:textColor="@color/button"
+        android:background="@color/transaparan"/>
+
+</LinearLayout>

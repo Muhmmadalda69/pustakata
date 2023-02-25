@@ -10,4 +10,5 @@
     <color name="background">#f9f4ef</color>
     <color name="button">#8c7851</color>
     <color name="secondary">#716040</color>
+    <color name="transaparan">#00716040</color>
 </resources>
