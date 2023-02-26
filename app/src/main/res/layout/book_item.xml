@@ -11,7 +11,7 @@
 
     <TextView
         android:id="@+id/tv_judulbuku"
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:text="Judul Buku"
@@ -20,8 +20,8 @@
 
     <TextView
         android:id="@+id/tv_namaPenulis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/tv_judulbuku"
         android:text="Nama Penulis"
         android:textColor="@color/white"
@@ -29,17 +29,20 @@
         android:textStyle="normal" />
 
     <ImageButton
-        android:id="@+id/bt_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toStartOf="@+id/bt_delete"
-        android:src="@drawable/ic_edit" />
-
-    <ImageButton
         android:id="@+id/bt_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
         android:src="@drawable/ic_delete" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/bt_delete"
+        android:textColor="@color/button"
+        android:textOff="TERSEDIA"
+        android:textOn="DIPINJAM"
+        android:thumbTint="@color/button"/>
 
 </RelativeLayout>

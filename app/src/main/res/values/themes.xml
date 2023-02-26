@@ -4,7 +4,7 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/button</item>
         <item name="colorPrimaryVariant">@color/button</item>
-        <item name="colorOnPrimary">@color/background</item>
+        <item name="colorOnPrimary">@color/button</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/button</item>
         <item name="colorSecondaryVariant">@color/secondary</item>

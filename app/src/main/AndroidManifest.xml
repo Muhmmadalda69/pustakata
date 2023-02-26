@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
-            android:name=".EditActivity"
-            android:exported="false" />
-        <activity
             android:name=".ProfilActivity"
             android:exported="false" />
         <activity

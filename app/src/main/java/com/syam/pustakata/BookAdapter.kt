@@ -17,7 +17,6 @@ class BookAdapter(private val context: Context, private var books: List<Book>) :
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvBuku: TextView = itemView.findViewById(R.id.tv_judulbuku)
         val tvPenulis: TextView = itemView.findViewById(R.id.tv_namaPenulis)
-        val editButton: ImageButton = itemView.findViewById(R.id.bt_edit)
         val deleteButton: ImageButton = itemView.findViewById(R.id.bt_delete)
     }
 
@@ -32,11 +31,13 @@ class BookAdapter(private val context: Context, private var books: List<Book>) :
         holder.tvBuku.text = book.buku
         holder.tvPenulis.text = book.penulis
 
+        /*
         holder.editButton.setOnClickListener {
             val intent = Intent(context, EditActivity::class.java)
             intent.putExtra("book_id", book.id)
             context.startActivity(intent)
         }
+        */
 
         holder.deleteButton.setOnClickListener {
             AlertDialog.Builder(context)
