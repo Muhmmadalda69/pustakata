@@ -50,55 +50,43 @@ class BookAdapter(private val context: Context, private var books: List<Book>) :
         val status = book.status
         if (status == "TERSEDIA"){
             holder.statusButton.setBackgroundResource(R.drawable.ic_tersedia)
-        }else{
+            holder.statusButton.setOnClickListener {
+                val db = Firebase.firestore
+                val booksRef = db.collection("koleksi")
+                booksRef.document(book.buku)
+                    .update(
+                        mapOf(
+                            "status" to "DIPINJAM"
+                        )
+                    )
+                    .addOnSuccessListener {
+                        Log.d(TAG, "DocumentSnapshot successfully updated!")
+                    }
+                    .addOnFailureListener { e ->
+                        Log.w(TAG, "Error updating document", e)
+                    }
+            }
+        }else {
             holder.statusButton.setBackgroundResource(R.drawable.ic_dipinjam)
+            holder.statusButton.setOnClickListener {
+                val db = Firebase.firestore
+                val booksRef = db.collection("koleksi")
+                booksRef.document(book.buku)
+                    .update(
+                        mapOf(
+                            "status" to "TERSEDIA"
+                        )
+                    )
+                    .addOnSuccessListener {
+                        Log.d(TAG, "DocumentSnapshot successfully updated!")
+                    }
+                    .addOnFailureListener { e ->
+                        Log.w(TAG, "Error updating document", e)
+                    }
+
+            }
         }
 
-        //merubah fungsi button statsu
-        holder.statusButton.setOnClickListener {
-            val db = Firebase.firestore
-            val booksRef = db.collection("koleksi")
-            booksRef.whereEqualTo("status", "TERSEDIA")
-                .get()
-                .addOnSuccessListener { documents ->
-                    for (document in documents) {
-                        booksRef.document(document.id)
-                            .update(mapOf(
-                                "status" to "DIPINJAM"
-                            ))
-                            .addOnSuccessListener {
-                                Log.d(TAG, "DocumentSnapshot successfully updated!")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w(TAG, "Error updating document", e)
-                            }
-                        holder.statusButton.setBackgroundResource(R.drawable.ic_dipinjam)
-
-                    }
-                }
-                .addOnFailureListener { exception ->
-                }
-
-            booksRef.whereEqualTo("status", "DIPINJAM")
-                .get()
-                .addOnSuccessListener { documents ->
-                    for (document in documents) {
-                        booksRef.document(document.id)
-                            .update(mapOf(
-                                "status" to "TERSEDIA"
-                            ))
-                            .addOnSuccessListener {
-                                Log.d(TAG, "DocumentSnapshot successfully updated!")
-                            }
-                            .addOnFailureListener { e ->
-                                Log.w(TAG, "Error updating document", e)
-                            }
-                        holder.statusButton.setBackgroundResource(R.drawable.ic_tersedia)
-                    }
-                }
-                .addOnFailureListener { exception ->
-                }
-        }
 
         holder.deleteButton.setOnClickListener {
             AlertDialog.Builder(context)

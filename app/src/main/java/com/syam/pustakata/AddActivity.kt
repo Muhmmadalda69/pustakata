@@ -53,11 +53,12 @@ class AddActivity : AppCompatActivity() {
                 "createdAt" to Date()
             )
 
+            val collectionRef = db.collection("koleksi")
+            val documentRef = collectionRef.document(buku)
             // Menampilkan progress dialog
             progressDialog.show()
             //input data ke firestore
-            db.collection("koleksi")
-                .add(koleksi)
+            documentRef.set(koleksi)
                 .addOnSuccessListener {
                     // Menutup progress dialog
                     progressDialog.dismiss()
