@@ -1,9 +1,11 @@
 package com.syam.pustakata
 
+import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
 
@@ -23,6 +25,11 @@ class AddActivity : AppCompatActivity() {
             finish()
         }
 
+        //prgres dialog
+        val progressDialog = ProgressDialog(this)
+        progressDialog.setMessage("Loading...")
+        progressDialog.setCancelable(false)
+
         //inisialisasi firebase
         db = FirebaseFirestore.getInstance()
 
@@ -35,23 +42,31 @@ class AddActivity : AppCompatActivity() {
             val penulis = etPenulis.text.toString().trim()
 
             if (buku.isEmpty() || penulis.isEmpty()) {
+                Toast.makeText(this,"Masukan data terlebih dahulu",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             val koleksi = hashMapOf(
                 "buku" to buku,
                 "penulis" to penulis,
+                "status" to "TERSEDIA",
                 "createdAt" to Date()
             )
 
+            // Menampilkan progress dialog
+            progressDialog.show()
+            //input data ke firestore
             db.collection("koleksi")
                 .add(koleksi)
                 .addOnSuccessListener {
+                    // Menutup progress dialog
+                    progressDialog.dismiss()
                     intent.putExtra("book", koleksi)
                     finish()
                 }
                 .addOnFailureListener {
-                    // handle exception
+                    // Menutup progress dialog
+                    progressDialog.dismiss()
                 }
         }
 

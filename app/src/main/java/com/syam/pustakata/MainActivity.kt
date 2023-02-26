@@ -62,7 +62,8 @@ class MainActivity : AppCompatActivity() {
                         val id = doc.id
                         val buku = doc.getString(Book.FIELD_BUKU) ?: ""
                         val penulis = doc.getString(Book.FIELD_PENULIS) ?: ""
-                        val book = Book(id, buku, penulis)
+                        val status = doc.getString(Book.FIELD_STATUS) ?: ""
+                        val book = Book(id, buku, penulis, status)
                         books.add(book)
                     }
                     adapter.setBooks(books)
