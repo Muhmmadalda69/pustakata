@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AddActivity">
+    tools:context=".EditActivity">
 
     //header
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="TAMBAHKAN KOLEKSI BUKU"
+            android:text="EDIT KOLEKSI BUKU"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -54,7 +54,7 @@
         app:startIconDrawable="@drawable/ic_buku"
         android:layout_marginHorizontal="30dp">
         <EditText
-            android:id="@+id/et_buku"
+            android:id="@+id/et_editbuku"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="text"
@@ -73,7 +73,7 @@
         android:layout_marginHorizontal="30dp"
         app:boxBackgroundColor="@color/white">
         <EditText
-            android:id="@+id/et_penulis"
+            android:id="@+id/et_editpenulis"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="text"
@@ -84,7 +84,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/bt_input"
+        android:id="@+id/bt_inputedit"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -93,7 +93,7 @@
         android:theme="@style/style_button"/>
 
     <Button
-        android:id="@+id/bt_batal"
+        android:id="@+id/bt_bataledit"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_gravity="center"

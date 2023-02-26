@@ -4,14 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Tugas Kuliah/Semester 6/Mobile/Pustakata/app/src/main/res/drawable/ic_add.xml" value="0.1305" />
+        <entry key="..\:/Tugas Kuliah/Semester 6/Mobile/Pustakata/app/src/main/res/drawable/ic_edit.xml" value="0.2575" />
         <entry key="..\:/Tugas Kuliah/Semester 6/Mobile/Pustakata/app/src/main/res/drawable/ic_search.xml" value="0.221" />
         <entry key="..\:/Tugas Kuliah/Semester 6/Mobile/Pustakata/app/src/main/res/drawable/ic_twotone_add_circle_24.xml" value="0.221" />
         <entry key="..\:/Tugas Kuliah/Semester 6/Mobile/Pustakata/app/src/main/res/drawable/oval_bg.xml" value="0.221" />
         <entry key="..\:/Tugas Kuliah/Semester 6/Mobile/Pustakata/app/src/main/res/drawable/search_bg.xml" value="0.221" />
         <entry key="..\:/Tugas Kuliah/Semester 6/Mobile/Pustakata/app/src/main/res/layout/activity_add.xml" value="0.38697916666666665" />
+        <entry key="..\:/Tugas Kuliah/Semester 6/Mobile/Pustakata/app/src/main/res/layout/activity_edit.xml" value="0.38697916666666665" />
         <entry key="..\:/Tugas Kuliah/Semester 6/Mobile/Pustakata/app/src/main/res/layout/activity_main.xml" value="0.38697916666666665" />
         <entry key="..\:/Tugas Kuliah/Semester 6/Mobile/Pustakata/app/src/main/res/layout/activity_profil.xml" value="0.38697916666666665" />
         <entry key="..\:/Tugas Kuliah/Semester 6/Mobile/Pustakata/app/src/main/res/layout/activity_splash.xml" value="0.38697916666666665" />
+        <entry key="..\:/Tugas Kuliah/Semester 6/Mobile/Pustakata/app/src/main/res/layout/book_item.xml" value="0.38697916666666665" />
       </map>
     </option>
   </component>
